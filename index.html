@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="description" content="Udacity Responsive Images course project" />
+  <meta name="author" content="//samdutton.com">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta charset="utf-8">
+  <meta itemprop="name" content="Udacity Responsive Images course project">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta id="theme-color" name="theme-color" content="#307699">
+
+  <!-- loads the Udacity Feedback extension -->
+  <meta name="udacity-grader" content="http://udacity.github.io/responsive-images/project/project-grader.json" unit-tests="http://udacity.github.io/responsive-images/project/project-grader.js">
+
+  <base target="_blank">
+
+  <title>My responsive blog: picture story</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100, 300, 400" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap-social.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img class="logo-svg" alt="Site logo" src="data:image/png;base64,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">
+
+    </div>
+  </header>
+  <article>
+    <h1>My responsive blog</h1>
+    <picture id="banner">
+      <source media="(min-width: 800px)" srcset="images/Fidji-1600_large_2x.jpg">
+      <source media="(min-width: 400px)" srcset="images/Fidji-400_small.jpg 400w, images/Fidji-800_middle.jpg 800w">
+      <img src="images/Fidji-400_small.jpg" alt="Fiji">
+    </picture>
+    <section>
+
+      <h2>My story</h2>
+
+      <p>Etiam euismod, sapien sed consectetur <span>&#9786</span>  sollicitudin, sem tortor luctus lectus, sit amet ultrices orci justo aliquet arcu. Maecenas auctor, dolor in sodales tempor, tortor dui condimentum arcu, a venenatis diam metus non eros. Nam sollicitudin lectus in erat ultrices dapibus. Sed sed elementum ipsum. Donec malesuada purus dictum, porttitor felis non, suscipit nibh. Ut nisl nibh, volutpat vitae arcu sed, aliquet sagittis eros. Pellentesque ultrices interdum eros, vitae eleifend lorem blandit eu. Nunc in tincidunt ex. Donec laoreet non risus ac consequat. Curabitur mollis ante at velit venenatis convallis. Donec sit amet pulvinar orci. Sed tristique non nibh scelerisque lobortis. Maecenas sit amet elementum orci, non accumsan lectus. Donec ut ullamcorper velit.</p>
+      <picture>
+        <source media="(min-width: 800px)" srcset="images/everest-800_middle.jpg 1x, images/everest-1600_large_2x.jpg 2x" sizes="50vw">
+        <source media="(min-width: 500px)" srcset="images/everest-400_small.jpg 400w, images/everest-800_middle.jpg 800w" >
+        <img src="images/everest-400_small.jpg" alt="Mount Everest">
+      </picture>
+      <figcaption>Mount Everest</figcaption>
+
+      <p>Mauris maximus dui enim, in tristique magna dignissim ut. Aenean mi nisi, imperdiet sed consequat quis, pulvinar et eros. Aliquam sodales sit amet lacus quis pellentesque. Ut vehicula dictum tincidunt. Etiam consectetur lorem ut lacinia suscipit. Duis ut neque imperdiet, tempor elit ac, tincidunt dolor. Ut pharetra dolor sagittis metus aliquam, sed porttitor neque vulputate. Morbi pulvinar velit in metus posuere, et venenatis ante molestie. In non tellus eu quam molestie ultrices. Cras ac imperdiet enim. Morbi mollis tellus mi, a lobortis lorem porttitor eget. Sed in lobortis tellus, nec laoreet nisl. Phasellus elementum pulvinar hendrerit. Proin nec nunc et justo venenatis vulputate sit amet non justo. Fusce egestas tellus ipsum, vitae laoreet libero mattis eu. Sed in lacus nisl.</p>
+
+      <p>Duis et quam non velit semper consectetur. Aliquam eu libero ac urna euismod pharetra et id ligula. Vivamus elementum eros leo, vitae laoreet nisl tristique eu. Nullam sit amet ex nunc. Vivamus maximus arcu vel varius malesuada. Suspendisse potenti. Praesent non hendrerit velit, vitae ullamcorper velit. Nam consectetur eget odio sit amet sodales. Mauris viverra id enim at pulvinar. Duis eleifend lorem quis nunc consectetur, et mattis mi posuere. Vivamus nulla ante, scelerisque vel volutpat at, faucibus at nulla. Curabitur neque enim, tempor eu magna eget, porta tempus augue. Integer a nisl lorem.</p>
+      <picture>
+        <source media="(min-width: 800px)" srcset="images/mahal-800_middle.jpg 1x, images/mahal-1600_large_2x.jpg 2x" sizes="50vw">
+        <source media="(min-width: 500px)" srcset="images/mahal-400_small.jpg 400w, images/mahal-800_middle.jpg 800w">
+        <img src="images/mahal-400_small.jpg" alt="Taj Mahal">
+      </picture>
+      <figcaption>Taj Mahal</figcaption>
+
+      <p>Nulla ipsum leo, lacinia ut facilisis id, finibus sed leo. Sed mollis arcu a velit luctus efficitur. Duis porttitor pulvinar vestibulum. Duis ultricies urna lacinia, ullamcorper nibh ac, lacinia ipsum. Proin iaculis, metus ac egestas placerat, lectus lacus tincidunt libero, sed pulvinar ipsum ante et dui. Praesent mi nisi, viverra non porttitor a, dapibus eget felis. Etiam efficitur lacus in justo ornare, a blandit libero rutrum. Etiam id ex rhoncus, pulvinar dolor a, mattis est.</p>
+      <p>Pellentesque porttitor, lectus at pellentesque varius, est elit laoreet risus, eu tempus nibh ligula quis augue. Aenean eget turpis iaculis, eleifend diam at, posuere justo. Quisque nec viverra ipsum. Pellentesque lobortis faucibus nibh ut sodales. Aliquam erat volutpat. Ut id est vel tortor rutrum vestibulum. Proin at massa vitae diam gravida vehicula in interdum lorem. Suspendisse ac aliquet enim. Donec lobortis odio sed consectetur ullamcorper.</p>
+      <picture>
+        <source media="(min-width: 800px)" srcset="images/Maia-800_middle.jpg 1x, images/Maia-1600_large_2x.jpg 2x" sizes="50vw">
+        <source media="(min-width: 500px)" srcset="images/Maia-400_small.jpg 400w, images/Maia-800_middle.jpg 800w" >
+        <img src="images/Maia-400_small.jpg" alt="Mesoamerican pyramids">
+      </picture>
+      <figcaption>Mesoamerican pyramids</figcaption>
+
+      <p>Suspendisse mattis mattis lectus, vel fringilla enim mollis nec. Mauris volutpat sapien at libero ultrices hendrerit non sed magna. Nulla facilisi. Quisque urna lorem, accumsan fermentum hendrerit ut, gravida sit amet leo. Pellentesque cursus sit amet libero ac egestas. Quisque id ligula a orci tristique sagittis. Nunc condimentum ornare arcu at cursus. Nulla nec leo eget libero varius consectetur. Etiam nec pharetra dui. Praesent urna odio, suscipit non urna nec, fringilla pretium sem.</p>
+
+      <p>Pellentesque cursus, urna a placerat lobortis, quam erat scelerisque nisi, in finibus leo dui eu erat. In id placerat turpis. Donec condimentum augue justo, ut condimentum magna fermentum ac. Mauris sit amet nisi diam. Nullam mattis massa non enim gravida, eget interdum felis porttitor. Sed nibh nulla, tincidunt in semper a, placerat eget nulla. Sed est diam, egestas eu ex ut, sagittis sodales magna. Nunc congue orci quam. Quisque purus leo, semper sit amet eleifend vitae, consectetur sed justo. Phasellus lectus mi, condimentum vel quam euismod, pharetra vestibulum nisl. Maecenas ac cursus elit.</p>
+      <picture>
+        <source media="(min-width: 800px)" srcset="images/piramida-800_middle.jpg 1x, images/piramida-1600_large_2x.jpg 2x" sizes="50vw">
+        <source media="(min-width: 500px)" srcset="images/piramida-400_small.jpg 400w, images/piramida-800_middle.jpg 800w">
+        <img src="images/piramida-400_small.jpg" alt="Great Pyramid of Giza">
+      </picture>
+      <figcaption>Great Pyramid of Giza</figcaption>
+
+      <p>Pellentesque hendrerit pretium est, vel commodo diam tempus quis. Maecenas nisl nisi, porttitor vel posuere vel, dapibus rutrum ante. Nam neque enim, vehicula in malesuada et, viverra quis dui. Duis enim risus, pellentesque sed lacus vel, vehicula laoreet libero. Donec vitae feugiat augue. Vestibulum vitae venenatis augue. Ut at consequat neque, bibendum sagittis ante. Aenean in orci eget velit tempor gravida. Proin quis est ac ipsum volutpat efficitur a ut est. Nullam tincidunt ligula ut neque placerat dignissim. </p>
+
+      <p>Praesent ac mollis velit. Aliquam metus quam, rhoncus sit amet luctus ut, iaculis id nisl. In hac habitasse platea dictumst. Integer consectetur sit amet sapien et luctus. Fusce non dolor ut turpis faucibus convallis. Nam ultrices porttitor placerat. Etiam vitae maximus eros, eu lobortis ligula. Donec ut ultrices tellus, in fermentum enim.</p>
+      <picture>
+        <source media="(min-width: 800px)" srcset="images/stone-800_middle.jpg 1x, images/stone-1600_large_2x.jpg 2x" sizes="50vw">
+        <source media="(min-width: 500px)" srcset="images/stone-400_small.jpg 400w, images/stone-800_middle.jpg 800w" >
+        <img src="images/stone-400_small.jpg" alt="Stonehenge">
+      </picture>
+      <figcaption>Stonehenge</figcaption>
+
+      <p>Integer vestibulum orci et turpis vulputate placerat. Nullam ac nisi vulputate, tristique massa fringilla, fringilla lorem. Cras consectetur nisi turpis, quis cursus ipsum rhoncus consequat. Sed at sapien diam. Sed lobortis, magna sed posuere ornare, ipsum tortor imperdiet est, a ornare nisi quam ac justo. Sed id quam a mi maximus tincidunt in aliquam nisl. Nulla eu venenatis mi. In at fermentum nulla.</p>
+
+      <p>Pellentesque nec erat vel leo euismod tristique pellentesque quis eros. Integer dapibus at mi eget posuere. Integer tincidunt leo a placerat imperdiet. Integer mauris urna, viverra eget massa eu, molestie elementum sem. Integer condimentum tellus a eros egestas sodales. Cras facilisis interdum ipsum. Proin feugiat rhoncus bibendum. Sed feugiat eget erat ac imperdiet. </p>
+      <picture>
+        <source media="(min-width: 800px)" srcset="images/wall-800_middle.jpg 1x, images/wall-1600_large_2x.jpg 2x" sizes="50vw">
+        <source media="(min-width: 500px)" srcset="images/wall-400_small.jpg 400w, images/wall-800_middle.jpg 800w">
+        <img src="images/wall-400_small.jpg" alt="Great Wall of China">
+      </picture>
+      <figcaption>Great Wall of China</figcaption>
+
+      <p>Fusce pellentesque malesuada pulvinar. In lobortis nulla nec enim mollis eleifend. Duis neque enim, maximus ultricies neque tempus, varius gravida odio. Nam vestibulum magna ac nisl dapibus, eget ullamcorper velit molestie. Proin maximus mauris quam, et scelerisque risus pulvinar pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus non tempor dui, quis convallis libero. Quisque et congue diam. </p>
+
+      <p>Integer et rutrum arcu. Donec aliquet nisi id tortor mattis efficitur. Morbi lobortis euismod arcu, ac lacinia ex rhoncus eget. Etiam eget arcu mi. Sed pharetra risus sit amet felis ultrices malesuada. Nam sagittis dignissim neque vitae lobortis. Duis vel dignissim enim. Vestibulum pretium neque enim, sit amet luctus massa rhoncus a.</p>
+      <picture>
+        <source media="(min-width: 800px)" srcset="images/coliseum-800_middle.jpg 1x, images/coliseum-1600_large_2x.jpg 2x" sizes="50vw">
+        <source media="(min-width: 500px)" srcset="images/coliseum-400_small.jpg 400w, images/coliseum-800_middle.jpg 800w" >
+        <img src="images/coliseum-400_small.jpg" alt="Colosseum">
+      </picture>
+      <figcaption>Colosseum</figcaption>
+
+      <p>Nulla tempus convallis arcu. Fusce id ullamcorper nisi. Donec iaculis varius dui eu euismod. Aenean ac orci est. Aliquam a consectetur neque. Curabitur velit eros, faucibus a tortor non, rhoncus dictum sem. Sed egestas massa in ullamcorper ullamcorper. Suspendisse sed metus augue. Praesent efficitur iaculis nibh, nec dignissim tortor eleifend ut. Nulla eu feugiat sem, sit amet maximus augue. Ut varius arcu at viverra mattis.</p>
+
+      <p>Etiam hendrerit placerat ornare. Ut finibus ligula libero, ut volutpat nulla maximus vel. Aliquam eleifend congue interdum. Suspendisse efficitur lacinia ex, a suscipit ex volutpat eget. Ut ligula orci, maximus at ante eu, vehicula elementum risus. Quisque a justo quam. Quisque sodales porttitor urna et sodales. Maecenas sapien nunc, blandit sed egestas pellentesque, feugiat pretium magna. </p>
+      </section>
+  </article>
+  <footer>
+    <hr>
+    <div class="social">
+      <a class="btn btn-social-icon btn-twitter" href="https://goo.gl/2JdUFa"><i class="fa fa-twitter"></i></a>
+      <a class="btn btn-social-icon btn-facebook" href="https://goo.gl/fxQ8tT"><i class="fa fa-facebook"></i></a>
+      <a class="btn btn-social-icon btn-google-plus" href="https://goo.gl/U9pt8K"><i class="fa fa-google-plus"></i></a>
+      <a class="btn btn-social-icon btn-github" href="https://github.com/"><i class="fa fa-github"></i></a>
+      <a class="btn btn-social-icon btn-digg" href="http://digg.com/"><i class="fa fa-digg"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
