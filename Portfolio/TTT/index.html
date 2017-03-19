@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic-Tac-Toe AI</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <link rel='stylesheet' type='text/css' href='styles/ui.css'>
+  <script src="https://unpkg.com/vue@2.2.2"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header_title">Tic Tac Toe</h1>
+  </header>
+  <div id="tic-tac-toe" class="container">
+    <div class="jumbotron jumbotron-fluid" style="margin: 0; padding-top: 16px; padding-bottom: 25px;">
+      <div class="row justify-content-center">
+        <div class="player left col-5 col-md-3 text-center">
+          <input type="radio" id="O" value="O" v-model="picked">
+          <label for="O"><i class="fa fa-circle-o" area-hidden="true"></i></label>
+        </div>
+        <div class="player right col-5 col-md-3 text-center">
+          <input type="radio" id="X" value="X" v-model="picked">
+          <label for="X"><strong>&#10005;</strong></label>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="wrapper">
+          <div :class='classBoard'>
+            <div v-for="(cell, index) in cells" :data-index="index" :class='cell.className' @click="insertIndx(index)" v-html="cells[index].text">
+              <!--{{ cells[index].text }}-->
+            </div>
+          </div>
+          <div :class='classControl'>
+            <div :class='classIngame'>
+              <p>{{ title }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="left-f col-5 col-md-3 text-left">
+          <input type="checkbox" name="advice" v-model="adviceMode"> Advice Mode
+          <br>
+        </div>
+        <div class="right-f col-5 col-md-3 text-right">
+          <button id="btn-1" @click="startGame">{{ buttonTitile }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="row justify-content-end main-footer">
+    <div class="col-12 col-md-4 text-center bottom-title">
+      <a href="https://www.linkedin.com/in/aliaksandr-pototski-555332118/?locale=en_US">Made with <i class="fa fa-heart footer-heart" aria-hidden="true"></i> by inlighter</a>
+    </div>
+    <div class="copyright col-12 col-md-4 text-right bottom-title">
+      <p><i class="fa fa-copyright" aria-hidden="true"></i> 2017 inlighter - All rights reserved</p>
+    </div>
+  </footer>
+  <script>
+    var ttt = new Vue({
+  el: "#tic-tac-toe",
+  data: {
+    buttonTitile: 'Start',
+    ind: '',
+    classBoard: 'board',
+    classControl: 'control',
+    classIngame: 'ingame',
+    picked: '',
+    adviceMode: false,
+
+    title: '',
+    cells: [{
+      text: '\xa0',
+      className: 'cell'
+    }, {
+      text: '\xa0',
+      className: 'cell'
+    }, {
+      text: '\xa0',
+      className: 'cell'
+    }, {
+      text: '\xa0',
+      className: 'cell'
+    }, {
+      text: '\xa0',
+      className: 'cell'
+    }, {
+      text: '\xa0',
+      className: 'cell'
+    }, {
+      text: '\xa0',
+      className: 'cell'
+    }, {
+      text: '\xa0',
+      className: 'cell'
+    }, {
+      text: '\xa0',
+      className: 'cell'
+    }]
+  },
+  methods: {
+    insertIndx(index) {
+
+      if (globalGame.status === "running" && globalGame.currentState.turn === this.picked && this.cells[index].className.indexOf('ocupied') == -1) {
+
+        var next = new State(globalGame.currentState);
+        this.cleanAdvice();
+        next.board[index] = next.turn
+        this.cells[index].className += ' ocupied';
+        if (next.turn === 'X') {
+          this.cells[index].text = '&#10005;';
+        } else {
+          this.cells[index].className += ' o-color';
+          this.cells[index].text = '<i class="fa fa-circle-o" area-hidden="true"></i>';
+
+        }
+        next.advanceTurn();
+        globalGame.advanceTo(next);
+      }
+    },
+    strikeThrough(winner, arr) {
+
+      for (var i = 0; i < arr.length; i++) {
+
+        this.cells[arr[i]].className += ' striked-through';
+
+      }
+    },
+    toggleAdvice(pos) {
+
+      for (var i = 0; i < pos.length; i++) {
+        if (this.cells[pos[i]].className.indexOf('best-move') === -1) {
+
+          this.cells[pos[i]].className += ' best-move';
+        }
+      }
+
+    },
+    cleanAdvice() {
+      for (var i = 0; i < this.cells.length; i++) {
+
+        this.cells[i].className = this.cells[i].className.replace(' best-move', '');
+
+      }
+    },
+    startGame() {
+
+      if (this.picked && !globalGame) {
+
+        aiPlayer = new AI();
+        globalGame = new Game(aiPlayer);
+        aiPlayer.plays(globalGame);
+        globalGame.start();
+
+      } else if (globalGame && globalGame.status === 'ended' ||
+        globalGame.status === 'running') {
+
+        this.classBoard = 'board';
+        this.classControl = 'control';
+        this.classIngame = 'ingame';
+        for (var i = 0; i < this.cells.length; i++) {
+          this.cells[i].text = '\xa0';
+          this.cells[i].className = 'cell';
+        }
+        aiPlayer = new AI();
+        globalGame = new Game(aiPlayer);
+        aiPlayer.plays(globalGame);
+        globalGame.start();
+      }
+      ttt.buttonTitile = "Restart";
+    },
+    popup() {
+
+      this.classControl += ' move-over';
+      this.classBoard += ' fadeOut';
+      this.classIngame += ' scale-up';
+
+    }
+  }
+});
+  </script>
+  <script src="scripts/game.js"></script>
+  <script src="scripts/ai.js"></script>
+  <script src="scripts/control.js"></script>
+</body>
+
+</html>

@@ -21,6 +21,7 @@ picture#banner img {
     }
 
 body {
+    font-size: 112.5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,6 +29,10 @@ body {
     color: rgb(10, 46, 74);
     font-weight: 400;
     margin: 2em 0;
+}
+
+html > body {
+    font-size: 18px;
 }
 
 article {
@@ -48,7 +53,7 @@ header {
 }
 
 article p {
-    text-indent: 40px;
+    text-indent: 2.22em;
 }
 
 ::selection {
@@ -58,29 +63,35 @@ article p {
 
 h1 {
     width: 100%;
-    font-size: 60px;
+    font-size: 3.333em;
+    margin-bottom: 1em;
+    margin-top: 0;
     text-align: center;
     font-weight: 300;
 
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 2.222em;
+    line-height: 1.929em;
+    margin-bottom: 0;
+    line-height: ;
     text-align: center;
     color: FireBrick;
 }
 
 p {
     text-align: justify;
-    font-size: 18px;
+    font-size: 1em;
     line-height: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 figcaption {
     font-size: 20px;
     text-align: center;
     color: FireBrick;
-    margin-bottom: 20px;
+    margin-bottom: 1.5em;
 }
 
 section {
