@@ -6,7 +6,7 @@ body {
 header {
   height: 100vh;
   background-size: cover;
-  background-position: center;
+  transition: background-position 0.1s;
   background-image: url("../img/desctop.jpg");
   background-attachment: fixed;
   position: relative;

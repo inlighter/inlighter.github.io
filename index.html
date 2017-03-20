@@ -244,8 +244,8 @@
                 $('.navbar-collapse').collapse('hide');
                 $('.navbar-toggle').addClass('collapsed').blur();
                 scroll_start = $(this).scrollTop();
-                var positionEled = $(".intro__wrap-scroll").position();
-                console.log(positionEled.top);
+                $("header").css("background-position", "50% calc(50% + " + scroll_start/15 + "px)");
+
                 if (scroll_start > offset.top) {
                     $(".navbar-custom").addClass('bg-inverse');
                     $('.navbar-brand-custom').css('color', 'papayawhip');
