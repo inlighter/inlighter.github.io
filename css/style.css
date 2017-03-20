@@ -1,42 +1,55 @@
+
 body {
     font-family: 'Roboto', sans-serif;
 }
 
-.album {
-    padding: 60px 0;
-    margin: 0;
+header {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/desctop.jpg");
+  background-attachment: fixed;
+  position: relative;
+  width: 100%;
+
 }
-.intro {
-    margin: 0 auto;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background: url("../img/dotted_pattern.png") top right fixed;
+
+.header__content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  min-height: auto;
+  text-align: left;
 }
 
 .intro__wrap {
   position: absolute;
   width: 100%;
-  top: 80%;
+  bottom: 0.5em;
+
 
 }
 
 .intro__wrap-scroll {
+  font-size: 0.75em;
+  opacity: 0.85;
   box-sizing: border-box;
-  padding-top: 100px;
+  padding-top: 75px;
   position: relative;
   width: 150px;
-  height: 125px;
+  height: 100px;
   margin: 0 auto;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
-  transition: margin-top 1s;
+  bottom: 0;
+  transition: bottom 1s;
 
 }
 
 .hide-scroll {
-  margin-top: 300px !important;
+  bottom: -300px;
 
 }
 
@@ -64,29 +77,15 @@ body {
 @keyframes eledDrop {
   0% {
     height: 8rem;
-    top: -8rem;
+    top: -5rem;
   }
   100% {
     height: 8rem;
-    top: 12rem;
+    top: 10rem;
   }
 }
 
-.hero-work {
-    top: 0;
-
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    background-image: url("../img/desctop.jpg");
-    background-position: 50% 0%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*animation: banners 30s ease-in-out 0s infinite normal;*/
-    background-attachment: fixed;
-}
-
-.hero-work:after {
+header::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -97,38 +96,19 @@ body {
     background: url("../img/dotted_pattern_wh.png") 50% 50% fixed rgba(32, 32, 32, 0.25);
 }
 
-/*@keyframes banners {
-    0% {
-        background-image: url('../img/cradmetech.jpg');
-    }
-    33% {
-        background-image: url('../img/desctop.jpg');
-    }
-    66% {
-        background-image: url('../img/main_page.jpg');
-    }
-    100% {
-        background-image: url('../img/cradmetech.jpg');
-    }
-}*/
-
 .work-title {
-    width: 300px;
-    top: 30vh;
-    left: 20vw;
+    width: 200px;
+    left: 18vw;
     position: relative;
-    z-index: 200;
     transition: all 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s;
 }
 
-.work-title h1 {
+.work-title h1, .work-title p {
     color: white;
-    font-size: 60px;
 }
 
-.work-title p {
-    color: white;
-
+.work-title h1 {
+    font-size: 3em;
 }
 
 .work-title h1:nth-of-type(2):after {
@@ -159,8 +139,15 @@ body {
 
 .contact__wrapper {
 
-    margin: 150px 0;
+    margin: 150px 0 100px 0 ;
     height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .contact__wrapper {
+      margin-top: 75px;
+      margin-bottom: 59px;
+}
 }
 
 
