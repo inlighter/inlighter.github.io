@@ -1,6 +1,5 @@
-
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -11,7 +10,6 @@ header {
   background-attachment: fixed;
   position: relative;
   width: 100%;
-
 }
 
 .header__content {
@@ -27,8 +25,6 @@ header {
   position: absolute;
   width: 100%;
   bottom: 0.5em;
-
-
 }
 
 .intro__wrap-scroll {
@@ -45,12 +41,10 @@ header {
   text-transform: uppercase;
   bottom: 0;
   transition: bottom 1s;
-
 }
 
 .hide-scroll {
   bottom: -300px;
-
 }
 
 .eledDrop {
@@ -86,49 +80,49 @@ header {
 }
 
 header::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index:0;
-    background: url("../img/dotted_pattern_wh.png") 50% 50% fixed rgba(32, 32, 32, 0.25);
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: url("../img/dotted_pattern_wh.png") 50% 50% fixed rgba(32, 32, 32, 0.25);
 }
 
 .work-title {
-    width: 200px;
-    left: 18vw;
-    position: relative;
-    transition: all 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  width: 200px;
+  left: 18vw;
+  position: relative;
+  transition: all 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s;
 }
 
-.work-title h1, .work-title p {
-    color: white;
+.work-title h1,
+.work-title p {
+  color: white;
 }
 
 .work-title h1 {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 .work-title h1:nth-of-type(2):after {
-    content: '';
-    height: 2px;
-    position: absolute;
-    width: 3rem;
-    background: #f61515;
-    bottom: 1.85rem;
-    left: 0;
-
+  content: '';
+  height: 2px;
+  position: absolute;
+  width: 3rem;
+  background: #f61515;
+  bottom: 1.85rem;
+  left: 0;
 }
 
 .navbar-custom {
-    transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .navbar-brand-custom {
-    font-family: 'Kaushan Script', cursive;
-    text-transform: capitalize;
+  font-family: 'Kaushan Script', cursive;
+  text-transform: capitalize;
 }
 
 .nav-link-custom {
@@ -138,60 +132,52 @@ header::before {
 }
 
 .contact__wrapper {
-
-    margin: 150px 0 100px 0 ;
-    height: 100%;
+  margin: 150px 0 100px 0;
+  height: 100%;
 }
 
 @media screen and (max-width: 768px) {
-    .contact__wrapper {
-      margin-top: 75px;
-      margin-bottom: 59px;
+  .contact__wrapper {
+    margin-top: 75px;
+    margin-bottom: 59px;
+  }
 }
-}
-
-
 
 .primary {
-    border: none;
-    max-width: 50em;
-    height: 1px;
-    background: -webkit-linear-gradient(left, transparent 0%, rgba(240, 95, 64, 0.8) 50%, transparent 100%);
+  border: none;
+  max-width: 50em;
+  height: 1px;
+  background: -webkit-linear-gradient(left, transparent 0%, rgba(240, 95, 64, 0.8) 50%, transparent 100%);
 }
 
 .contact__title,
 .contact__mail,
 .contact__tel {
-
-    font-size: 1.25em;
-    margin-top: 0.625em;
-
+  font-size: 1.25em;
+  margin-top: 0.625em;
 }
 
 .contact__mail > a {
-  color: rgb(240,95,64);
+  color: rgb(240, 95, 64);
 }
 
 .contact {
-
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-margin-top: 3em;
-    transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  margin-top: 3em;
+  transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
 }
 
 .animated {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: scale(3);
-    transform: scale(3);
-
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scale(3);
+  transform: scale(3);
 }
 
 #portfolio {
-    background-color: #eee;
+  background-color: #eee;
 }
 
 #portfolio .portfolio-item .portfolio-caption p,
@@ -212,10 +198,17 @@ section h2.section-heading {
 }
 
 section h3.section-subheading {
-  font-size: 16px;
+  font-size: 1em;
   text-transform: none;
   font-weight: 400;
-  margin-bottom: 75px
+  margin-bottom: 4.7em;
+}
+
+.section-subheading {
+  line-height: 1.5em;
+  max-width: 50em;
+  margin: 0 auto;
+  text-indent: 1.5em;
 }
 
 @media (min-width:768px) {
@@ -224,21 +217,20 @@ section h3.section-subheading {
   }
 }
 
-
-#portfolio .portfolio-item {
+.portfolio-item {
   margin: 0 0 15px;
   right: 0
 }
 
-#portfolio .portfolio-item .portfolio-link {
+.portfolio-link {
   display: block;
   position: relative;
   max-width: 400px;
   margin: 0 auto
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  background: rgba(33, 33, 33,0.5);
+.portfolio-hover {
+  background: rgba(33, 33, 33, 0.5);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -248,11 +240,11 @@ section h3.section-subheading {
   -moz-transition: all ease .5s
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+.portfolio-hover:hover {
   opacity: 1
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+.portfolio-hover-content {
   position: absolute;
   width: 100%;
   height: 20px;
@@ -263,16 +255,16 @@ section h3.section-subheading {
   color: #fff
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+.portfolio-hover-content i {
   margin-top: -12px
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+.portfolio-hover-content h3,
+.portfolio-hover-content h4 {
   margin: 0
 }
 
-#portfolio .portfolio-item .portfolio-caption {
+.portfolio-caption {
   max-width: 400px;
   margin: 0 auto;
   background-color: #fff;
@@ -280,12 +272,12 @@ section h3.section-subheading {
   padding: 25px
 }
 
-#portfolio .portfolio-item .portfolio-caption h4 {
+.portfolio-caption h4 {
   text-transform: none;
   margin: 0
 }
 
-#portfolio .portfolio-item .portfolio-caption p {
+.portfolio-caption p {
   font-size: 16px;
   margin: 0
 }
@@ -490,99 +482,17 @@ footer ul.quicklinks {
   }
 }
 
-
-
-
-
-.portfolio-modal .modal-dialog {
-  margin: 0;
-  height: 100%;
-  width: auto
-}
-
-.portfolio-modal .modal-content {
-  border-radius: 0;
-  background-clip: border-box;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: none;
-  min-height: 100%;
-  padding: 100px 0;
-  text-align: center
-}
-
-.portfolio-modal .modal-content h2 {
-  margin-bottom: 15px;
-  font-size: 3em
-}
-
-.portfolio-modal .modal-content p {
-  margin-bottom: 30px
-}
-
-.portfolio-modal .modal-content p.item-intro {
-  margin: 20px 0 30px;
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: italic;
-  font-size: 16px
-}
-
-.portfolio-modal .modal-content ul.list-inline {
-  margin-bottom: 30px;
-  margin-top: 0
-}
-
-.portfolio-modal .modal-content img {
-  margin-bottom: 30px
-}
-
-.portfolio-modal .close-modal {
-  position: absolute;
-  width: 75px;
-  height: 75px;
-  background-color: transparent;
-  top: 25px;
-  right: 25px;
-  cursor: pointer
-}
-
-.portfolio-modal .close-modal:hover {
-  opacity: .3
-}
-
-.portfolio-modal .close-modal .lr {
-  height: 75px;
-  width: 1px;
-  margin-left: 35px;
-  background-color: #222;
-  transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  z-index: 1051
-}
-
-.portfolio-modal .close-modal .lr .rl {
-  height: 75px;
-  width: 1px;
-  background-color: #222;
-  transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  z-index: 1052
-}
-
-.portfolio-modal .modal-backdrop {
-  opacity: 0;
-  display: none
-}
-
 .social {
   margin-bottom: 0.5em;
 }
 
 @keyframes social-up {
-  0% {margin-bottom: -5em;}
-  100% {margin-bottom: 0.5em;}
+  0% {
+    margin-bottom: -5em;
+  }
+  100% {
+    margin-bottom: 0.5em;
+  }
 }
 
 ::-moz-selection {
@@ -604,4 +514,3 @@ img::selection {
 img::-moz-selection {
   background: 0 0
 }
-
