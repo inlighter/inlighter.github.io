@@ -1,19 +1,7 @@
-/*
 
-Your styles go here!
-
-Hint! You'll probably want to start by styling:
-  * <body>
-  * <article>
-  * <h1>
-  * <img>
-
-I've left some boilerplate below for you.
-
-*/
-/* {
+* {
   outline: 1px solid red;
-}*/
+}
 
 picture#banner img {
     max-width: 100vw;
@@ -136,7 +124,7 @@ footer {
 }
 
 .social {
-    width: 50em;
+    max-width: 50em;
     justify-content: center;
     align-items: center;
     display: flex;

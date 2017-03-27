@@ -441,8 +441,8 @@ footer a {
   }
 
   .hero {
-    background-image: -webkit-image-set( url('./images/AI-550.jpg') 1x, url('./images/AI-1100-2x.jpg') 2x);
-    background-image: -webkit-image-set( url('./images/AI-550.webp') 1x, url('./images/AI-1100-2x.webp') 2x);
+    background-image: -webkit-image-set( url('../images/AI-550.jpg') 1x, url('../images/AI-1100-2x.jpg') 2x);
+    background-image: -webkit-image-set( url('../images/AI-550.webp') 1x, url('../images/AI-1100-2x.webp') 2x);
 }
 
 
@@ -563,8 +563,8 @@ footer a {
 
 @media screen and (min-width: 550px) and (max-width: 700px) {
     .hero {
-    background-image: -webkit-image-set( url('./images/AI-700.jpg') 1x, url('./images/AI-1400-2x.jpg') 2x);
-    background-image: -webkit-image-set( url('./images/AI-700.webp') 1x, url('./images/AI-1400-2x.webp') 2x);
+    background-image: -webkit-image-set( url('../images/AI-700.jpg') 1x, url('../images/AI-1400-2x.jpg') 2x);
+    background-image: -webkit-image-set( url('../images/AI-700.webp') 1x, url('../images/AI-1400-2x.webp') 2x);
 }
 
   .content {
