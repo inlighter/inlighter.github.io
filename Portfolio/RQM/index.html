@@ -33,7 +33,7 @@
   var currentAuthor = "Неизвестный автор";
   var currentLink = "";
   function getNextQuote() {
-    $.getJSON("https://www.quotzzy.co/api/quote/?lang=ru", function(data) {
+    $.getJSON("www.quotzzy.co/api/quote/?lang=ru", function(data) {
       console.log(data);
       try {
       currentQuote = data.text;
