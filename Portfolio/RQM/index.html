@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Random Quote Machine</title>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lora:400,400i&subset=cyrillic">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+          <div class="wrapper">
+            <div class="quote">
+              <blockquote title="Click to generate new quote"></blockquote>
+              <footer><cite><a href="#" target="_blank"></a></cite>
+
+              </footer>
+              <div class="button">
+                <a id="tweet-quote" title="Tweet this quote!" target="_blank">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+        <script>
+  var currentQuote = "";
+  var currentAuthor = "Неизвестный автор";
+  var currentLink = "";
+  function getNextQuote() {
+    $.getJSON("http://www.quotzzy.co/api/quote/?lang=ru", function(data) {
+      console.log(data);
+      try {
+      currentQuote = data.text;
+      currentAuthor = data.author.name;
+      currentLink = data.author.wiki;
+      } catch (e) {
+        console.warn("Undefined error");
+      }
+
+      var count = 0;
+
+      if (!currentQuote) {
+        getNextQuote();
+      } else {
+
+      function nextLetter() {
+        $("blockquote").append(currentQuote.charAt(count));
+        if (count < currentQuote.length) {
+          count += 1;
+          setTimeout(nextLetter, 35);
+
+        }
+      }
+      nextLetter();
+      $("footer cite a").text("— " + currentAuthor);
+      $("footer cite a").attr("href", currentLink);
+      $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+    }
+    }).fail(function() {
+    $("blockquote").text("Произошла ошибка. Попробуйте еще раз.");
+  });
+  }
+
+
+$(function() {
+  if (!$("blockquote").text()) {
+    $(".quote").delay(200).fadeTo(800, 1);
+    getNextQuote();
+  }
+
+  $("blockquote").click(function() {
+    $("blockquote").text("");
+    $("footer cite a").text("");
+    $(".quote").fadeOut('fast');
+    getNextQuote();
+    $(".quote").delay(200).fadeIn(500);
+  });
+
+  $('button').on('click', function() {
+    openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+
+  });
+
+});
+        </script>
+    </body>
+</html>
