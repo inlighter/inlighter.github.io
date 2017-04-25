@@ -21,9 +21,7 @@ const routes: Routes = [
   { path: 'share', 
     children: [
     {path: '', redirectTo: '/', pathMatch: 'full'},
-    {path: ':tasks', component: TasksComponent, resolve: {
-      tasks: UrlResolver
-      }
+    {path: ':tasks', component: TasksComponent
     }
     ]},
 	{ path: ':status', component: TasksComponent },
