@@ -9,7 +9,7 @@ import { TaskService } from './task.service';
   </section>
   <form>
   <button class="btn-1" type="button" (click)="shareMyList()">Share</button>
-  <textarea [class.share]="isEnable" placeholder="Shared link!">{{sharedLink}}</textarea>
+  <textarea *ngIf="isEnable" placeholder="Shared link!">{{sharedLink}}</textarea>
   </form>
   ` 
 
