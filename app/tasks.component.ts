@@ -27,6 +27,7 @@ export class TasksComponent implements OnInit  {
 		
 		if (this.route.snapshot.data.hasOwnProperty('tasks')) {
 			url = this.route.snapshot.url[0].path;
+			console.log(url);
 			if (this.route.snapshot.data.hasOwnProperty('tasks') && this.taskService.decodeIntoList(url)) {
 				this.tasksContainer = this.route.snapshot.data['tasks'];
 				this.taskService.setExternalTodo(this.tasksContainer);
