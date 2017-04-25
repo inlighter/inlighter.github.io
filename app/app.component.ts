@@ -9,15 +9,17 @@ import { TaskService } from './task.service';
   </section>
   <form>
   <button class="btn-1" type="button" (click)="shareMyList()">Share</button>
-  <textarea placeholder="Shared link!">{{sharedLink}}</textarea>
+  <textarea [class.share]="isEnable" placeholder="Shared link!">{{sharedLink}}</textarea>
   </form>
   ` 
 
 })
 export class AppComponent {
   sharedLink: string;
+  isEnable: boolean = false;
   constructor(private taskService: TaskService){}
   shareMyList(){
     this.sharedLink = this.taskService.encodeTaskList();
+    this.isEnable = true;
   }
 }

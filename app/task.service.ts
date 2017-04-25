@@ -76,7 +76,7 @@ export class TaskService {
 
 	
 	encodeTaskList(): string {
-		return encodeURIComponent(window.location.host + '/#/share/' + JSON.stringify(this.taskList));
+		return window.location.host + '/#/share/' + encodeURIComponent(JSON.stringify(this.taskList));
 	}
 
 	setExternalTodo(tasks: Task[]): void {
