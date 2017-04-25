@@ -58,7 +58,7 @@ textarea {
     color: #212121;
     box-sizing: border-box;
     padding: 8px;
-    display: none;
+    display: inline-block;
     position: relative;
 	margin-top: 1.5em;
     margin-right: 20px;
@@ -67,7 +67,7 @@ textarea {
 }
 
 .share {
-	display: inline-block !important;
+	display: inline-block;
 }
 
 
