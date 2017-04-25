@@ -39,6 +39,8 @@ export class TasksComponent implements OnInit  {
 			this.router.navigate(['../../'], {relativeTo: this.route});
 			
 			this.tasksContainer = null;
+		} else if (this.route.snapshot.data.hasOwnProperty('tasks')) {
+			this.router.navigate(['../../'], {relativeTo: this.route});
 		}
 
 		}
