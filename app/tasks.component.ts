@@ -36,11 +36,11 @@ export class TasksComponent implements OnInit  {
 			this.tasksContainer = this.route.snapshot.data['tasks'];
 			this.taskService.setExternalTodo(this.tasksContainer);
 			
-			this.router.navigate(['../../'], {relativeTo: this.route});
+			this.router.navigate(['https://inlighter.github.io/'], {relativeTo: this.route});
 			
 			this.tasksContainer = null;
 		} else if (this.route.snapshot.data.hasOwnProperty('tasks')) {
-			this.router.navigate(['../../'], {relativeTo: this.route});
+			this.router.navigate(['https://inlighter.github.io/'], {relativeTo: this.route});
 		}
 
 		}
