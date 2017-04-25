@@ -32,18 +32,18 @@ var TasksComponent = (function () {
         this.route.params.map(function (params) { return params['status']; })
             .subscribe(function (status) { _this.selectedFilter = status || ''; });
         //console.log(this.route.snapshot.data.tasks);
-        // let url;
-        // if (this.route.snapshot.data.tasks) {
-        // 	url = this.route.snapshot.url[0].path;
-        // } else {
-        // 	url = '';
-        // }		
-        // if (this.route.snapshot.data.tasks && this.taskService.decodeIntoList(url)) {
-        // 	this.tasksContainer = this.route.snapshot.data.tasks;
-        // 	this.taskService.setExternalTodo(this.tasksContainer);
-        // 	this.router.navigate(['../../'], {relativeTo: this.route});
-        // 	this.tasksContainer = null;
-        // }
+        var url;
+        console.log(Boolean(this.route.snapshot.data.hasOwnProperty('tasks')));
+        if (this.route.snapshot.data.hasOwnProperty('tasks')) {
+            url = this.route.snapshot.url[0].path;
+            console.log(url);
+            if (this.route.snapshot.data.hasOwnProperty('tasks') && this.taskService.decodeIntoList(url)) {
+                this.tasksContainer = this.route.snapshot.data['tasks'];
+                this.taskService.setExternalTodo(this.tasksContainer);
+                this.tasksContainer = null;
+            }
+            this.router.navigate(['../../'], { relativeTo: this.route });
+        }
     };
     TasksComponent.prototype.focusOnDblClick = function (task) {
         var _this = this;
