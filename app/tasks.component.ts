@@ -27,23 +27,15 @@ export class TasksComponent implements OnInit  {
 		
 		if (this.route.snapshot.data.hasOwnProperty('tasks')) {
 			url = this.route.snapshot.url[0].path;
-		} else {
-			url = '';
-		}		
-		 
-		
-		if (this.route.snapshot.data.hasOwnProperty('tasks') && this.taskService.decodeIntoList(url)) {
-			this.tasksContainer = this.route.snapshot.data['tasks'];
-			this.taskService.setExternalTodo(this.tasksContainer);
-			
-			this.router.navigate(['https://inlighter.github.io/'], {relativeTo: this.route});
-			
-			this.tasksContainer = null;
-		} else if (this.route.snapshot.data.hasOwnProperty('tasks')) {
-			this.router.navigate(['https://inlighter.github.io/'], {relativeTo: this.route});
-		}
+			if (this.route.snapshot.data.hasOwnProperty('tasks') && this.taskService.decodeIntoList(url)) {
+				this.tasksContainer = this.route.snapshot.data['tasks'];
+				this.taskService.setExternalTodo(this.tasksContainer);
+				this.tasksContainer = null;
+			} 
+			this.router.navigate(['../../'], {relativeTo: this.route});
+		} 
 
-		}
+	}
 
 	public myFocusTrigger = new EventEmitter<boolean>();
 	
