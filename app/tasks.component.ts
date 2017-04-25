@@ -23,22 +23,23 @@ export class TasksComponent implements OnInit  {
 		
 		//console.log(this.route.snapshot.data.tasks);
 		
-		// let url;
-		// if (this.route.snapshot.data.tasks) {
-		// 	url = this.route.snapshot.url[0].path;
-		// } else {
-		// 	url = '';
-		// }		
+		let url;
+		
+		if (this.route.snapshot.data.hasOwnProperty('tasks')) {
+			url = this.route.snapshot.url[0].path;
+		} else {
+			url = '';
+		}		
 		 
 		
-		// if (this.route.snapshot.data.tasks && this.taskService.decodeIntoList(url)) {
-		// 	this.tasksContainer = this.route.snapshot.data.tasks;
-		// 	this.taskService.setExternalTodo(this.tasksContainer);
+		if (this.route.snapshot.data.hasOwnProperty('tasks') && this.taskService.decodeIntoList(url)) {
+			this.tasksContainer = this.route.snapshot.data['tasks'];
+			this.taskService.setExternalTodo(this.tasksContainer);
 			
-		// 	this.router.navigate(['../../'], {relativeTo: this.route});
+			this.router.navigate(['../../'], {relativeTo: this.route});
 			
-		// 	this.tasksContainer = null;
-		// }
+			this.tasksContainer = null;
+		}
 
 		}
 
