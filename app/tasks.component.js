@@ -33,7 +33,6 @@ var TasksComponent = (function () {
             .subscribe(function (status) { _this.selectedFilter = status || ''; });
         //console.log(this.route.snapshot.data.tasks);
         var url;
-        console.log(Boolean(this.route.snapshot.data.hasOwnProperty('tasks')));
         if (this.route.snapshot.data.hasOwnProperty('tasks')) {
             url = this.route.snapshot.url[0].path;
             console.log(url);

@@ -14,17 +14,19 @@ var AppComponent = (function () {
     function AppComponent(taskService) {
         this.taskService = taskService;
         this.isEnable = false;
+        this.btnLabel = 'Share';
     }
     AppComponent.prototype.shareMyList = function () {
         this.sharedLink = this.taskService.encodeTaskList();
-        this.isEnable = true;
+        this.isEnable = !this.isEnable;
+        this.btnLabel = this.btnLabel === 'Share' ? 'Hide' : 'Share';
     };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'todo-app',
-        template: "\n  <section class=\"todoapp\">\n  <router-outlet></router-outlet>\n  </section>\n  <form>\n  <button class=\"btn-1\" type=\"button\" (click)=\"shareMyList()\">Share</button>\n  <textarea [class.share]=\"isEnable\" placeholder=\"Shared link!\">{{sharedLink}}</textarea>\n  </form>\n  "
+        template: "\n  <section class=\"todoapp\">\n  <router-outlet></router-outlet>\n</section>\n<form>\n  <button class=\"btn-1\" type=\"button\" (click)=\"shareMyList()\">{{btnLabel}}</button>\n  <textarea *ngIf=\"isEnable\" placeholder=\"Shared link!\">{{sharedLink}}</textarea>\n</form>\n"
     }),
     __metadata("design:paramtypes", [task_service_1.TaskService])
 ], AppComponent);
