@@ -24,7 +24,7 @@ export class TasksComponent implements OnInit  {
 		//console.log(this.route.snapshot.data.tasks);
 		
 		let url;
-		
+		console.log(Boolean(this.route.snapshot.data.hasOwnProperty('tasks')));
 		if (this.route.snapshot.data.hasOwnProperty('tasks')) {
 			url = this.route.snapshot.url[0].path;
 			console.log(url);
