@@ -1,0 +1,144 @@
+picture#banner img {
+    max-width: 100vw;
+    width: 100vw;
+    }
+
+body {
+    font-size: 112.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    color: rgb(10, 46, 74);
+    font-weight: 400;
+    margin: 2em 0;
+}
+
+html > body {
+    font-size: 18px;
+}
+
+article {
+    max-width: 50em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 2em;
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+article p {
+    text-indent: 2.22em;
+}
+
+::selection {
+    background-color: #546389;
+    color: #fff;
+}
+
+h1 {
+    width: 100%;
+    font-size: 3.333em;
+    margin-bottom: 1em;
+    margin-top: 0;
+    text-align: center;
+    font-weight: 300;
+
+}
+
+h2 {
+    font-size: 2.222em;
+    line-height: 1.929em;
+    margin-bottom: 0;
+    line-height: ;
+    text-align: center;
+    color: FireBrick;
+}
+
+p {
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+figcaption {
+    font-size: 20px;
+    text-align: center;
+    color: FireBrick;
+    margin-bottom: 1.5em;
+}
+
+section {
+    max-width: 50em;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section img {
+    border-radius: 10px;
+    max-width: 100%;
+    width: 100%;
+}
+
+span {
+    font-size: 20px;
+}
+
+hr {
+    border: none;
+    display: block;
+    max-width: 50em;
+    width: 90vw;
+    height: 1px;
+    background: -webkit-linear-gradient(left, transparent 0%,#928d8d 50%,transparent 100%);
+}
+
+a.btn {
+    display: inline-block;
+    margin: 0 2px;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.social {
+    max-width: 50em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+div.logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.logo-svg {
+    max-width: 2vw;
+
+}
+
+
+
+
