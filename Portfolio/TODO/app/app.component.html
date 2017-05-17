@@ -1,0 +1,7 @@
+<section class="todoapp">
+  <router-outlet></router-outlet>
+</section>
+<form>
+  <button class="btn-1" type="button" (click)="shareMyList()">{{btnLabel}}</button>
+  <textarea *ngIf="isEnable" placeholder="Shared link!">{{sharedLink}}</textarea>
+</form>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular QuickStart</title>
+    <base href="https://inlighter.github.io/Portfolio/TODO/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+
+    <script src="https://unpkg.com/zone.js@0.8.4?main=browser"></script>
+    <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+
+    <script src="systemjs.config.server.js"></script>
+    <script>
+      System.import('main.js').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <todo-app></todo-app>
+    
+    <footer class="info">
+      <p>Double-click to edit a todo</p>
+      <p>
+        Created by <a href="http://github.com/inlighter">Aliaksandr Patotski</a> using <a href="http://angular.io">Angular4</a>
+      </p>
+      <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+    </footer>
+  </body>
+</html>
