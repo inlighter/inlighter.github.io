@@ -19,9 +19,9 @@
       },
       url: 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous',
       success: function(response) {
-        var r = JSON.parse(response);
-        currentQuote = r.quote;
-        currentAuthor = r.author;
+        
+        currentQuote = response.quote;
+        currentAuthor = response.author;
 
         var count = 0;
         var currentID = id;
