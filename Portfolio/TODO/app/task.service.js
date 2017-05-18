@@ -66,7 +66,7 @@ var TaskService = (function () {
         return this.taskList;
     };
     TaskService.prototype.encodeTaskList = function () {
-        return window.location.host + '/Portfolio/TODO/#/share/' + encodeURIComponent(JSON.stringify(this.taskList));
+        return window.location.host + '\/Portfolio/TODO/#/share/' + encodeURIComponent(JSON.stringify(this.taskList));
     };
     TaskService.prototype.setExternalTodo = function (tasks) {
         this.taskList = tasks;
