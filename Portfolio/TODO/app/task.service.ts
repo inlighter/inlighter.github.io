@@ -76,7 +76,7 @@ export class TaskService {
 
 	
 	encodeTaskList(): string {
-		return window.location.host + 'Portfolio/TODO/#/share/' + encodeURIComponent(JSON.stringify(this.taskList));
+		return window.location.host + '/Portfolio/TODO/#/share/' + encodeURIComponent(JSON.stringify(this.taskList));
 	}
 
 	setExternalTodo(tasks: Task[]): void {
