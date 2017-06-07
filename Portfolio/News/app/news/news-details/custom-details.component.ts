@@ -5,7 +5,16 @@ import { Router } from '@angular/router';
 import { Article } from '../article.model';
 
 @Component({
-    templateUrl: '/Portfolio/News/app/news/news-details/custom-details.component.html',
+    template: `
+    <div class="container">
+        <div *ngIf="article?.title" class="well hoverwell thumbnail">
+            <h1>{{ article?.title }}</h1>                
+                <div class="info" *ngIf="article?.publishedAt || article?.author">{{ article?.publishedAt  | date  }} by {{ article?.author }}</div>        
+                <p class="article-content" *ngIf="article?.text">{{ article?.text }}</p>
+                <button class="btn btn-primary" (click)="delete()">Delete</button>
+        </div>
+    </div>
+    `,
     styles: [
         `
          .article-content {
