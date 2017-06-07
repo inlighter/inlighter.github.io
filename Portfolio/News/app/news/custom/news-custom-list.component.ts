@@ -4,7 +4,7 @@ import { Article } from '../article.model';
 
 @Component({
     
-    templateUrl: './news-custom-list.component.html',
+    templateUrl: 'app/news/custom/news-custom-list.component.html',
     styles: [`
         .clear-btn {
             margin-top: 30px;
@@ -23,8 +23,8 @@ export class NewsCustomListComponent implements OnInit {
     }
 
     removeAll(): void {
-        const readLaterArticles = this.newsStorageService.getArticles();
-        const readLaterArticlesEdited = readLaterArticles.filter(news => news.source !== 'custom');
+        let readLaterArticles = this.newsStorageService.getArticles();
+        let readLaterArticlesEdited = readLaterArticles.filter(news => news.source !== 'custom');
         this.newsStorageService.saveListArticles(readLaterArticlesEdited);
         this.newsStorageService.clearCustomStorage();
     }

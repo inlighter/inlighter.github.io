@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 export class NewsService {
     get(url: string): Promise<any> {
         return new Promise((resolve, reject) => {
-            const req = new XMLHttpRequest();
+            var req = new XMLHttpRequest();
             req.open('GET', url);
 
             req.onload = () => {
@@ -34,7 +34,7 @@ export class NewsService {
 
     getNews(source: string): Promise<any> {
         
-        const url = 'https://newsapi.org/v1/articles?source=' + source + '&sortBy=latest&apiKey=ea4831f1563048af8bfa3fd779ea332f';
+        let url = 'https://newsapi.org/v1/articles?source=' + source + '&sortBy=latest&apiKey=ea4831f1563048af8bfa3fd779ea332f';
         
         return this.getJSON(url).then(news => news.articles);
     }

@@ -5,7 +5,7 @@ import { Article } from '../article.model';
 
 @Component({
     selector: 'create-news',
-    templateUrl: './create-news.component.html',
+    templateUrl: 'app/news/create/create-news.component.html',
     styles: [`
     textarea {
         height: 450px;
@@ -31,8 +31,8 @@ export class CreateNewsComponent {
     }
 
     add(data: {title: string, article: string}): void {
-        const title = data.title.trim();
-        const article = data.article.trim();
+        let title = data.title.trim();
+        let article = data.article.trim();
         if (title && article) {
             this.customArticle.title = title;
             this.customArticle.text = article;

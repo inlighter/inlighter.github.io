@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { Article } from '../article.model';
 
 @Component({
-    templateUrl: './custom-details.component.html',
+    templateUrl: '/app/news/news-details/custom-details.component.html',
     styles: [
         `
          .article-content {

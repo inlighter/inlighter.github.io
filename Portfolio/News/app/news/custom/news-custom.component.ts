@@ -14,7 +14,7 @@ import { Article } from '../article.model';
         <button *ngIf="isSaved" class="btn btn-primary story-btn" (click)="removeOnClick(news)" >Remove</button>
     </div>
     `,
-    styleUrls: ['./news-custom-thumbnail.component.css']
+    styleUrls: ['app/news/custom/news-custom-thumbnail.component.css']
 })
 
 export class NewsCustomComponent implements OnInit {

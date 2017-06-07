@@ -32,7 +32,7 @@ import { Article } from './article.model';
 
 export class NewsListComponent implements OnInit {
     articles: Article[];
-    articleSource: string;
+    articleSource: string = 'The Next Web';
     savedArticles: Article[];
     constructor(private newsStorageService: NewsStorageService, private newsService: NewsService, private route: ActivatedRoute) {
 
@@ -76,7 +76,7 @@ export class NewsListComponent implements OnInit {
         
         this.getSavedArticles();
         this.newsService.getNews(source).then(news => {
-            const tempArticles = this.updateArticlesSource(source, news);
+            let tempArticles = this.updateArticlesSource(source, news);
             this.filterArticles(tempArticles);
 
         });

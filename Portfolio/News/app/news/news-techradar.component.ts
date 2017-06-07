@@ -16,14 +16,14 @@ import { Article } from './article.model';
         <button *ngIf="isSaved" class="btn btn-primary story-btn" (click)="removeOnClick(news)" >Remove</button>
     </div>
     `,
-    styleUrls: ['./news-thumbnail.component.css']
+    styleUrls: ['app/news/news-thumbnail.component.css']
 })
 
 export class NewsTechRadarComponent {
     @Input() news: Article;
     @Input() isSaved: boolean;
     @Output() eventClick = new EventEmitter();
-    readLater = 'Read later';
+    readLater: string = 'Read later';
     constructor(private newsStorage: NewsStorageService) {
 
     }     

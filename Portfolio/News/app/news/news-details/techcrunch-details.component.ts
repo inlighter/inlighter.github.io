@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Article } from '../article.model';
 
 @Component({
-    templateUrl: './techcrunch-details.component.html',
+    templateUrl: '/app/news/news-details/techcrunch-details.component.html',
     styles: [
         `
         .article-content {

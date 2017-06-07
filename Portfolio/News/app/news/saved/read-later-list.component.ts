@@ -3,7 +3,7 @@ import { NewsStorageService } from '../../shared/news-storage.service';
 import { Article } from '../article.model';
 
 @Component({
-    templateUrl: './read-later-list.component.html',
+    templateUrl: 'app/news/saved/read-later-list.component.html',
     styles: [`
         .clear-btn {
             margin-top: 30px;
