@@ -3,18 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Article } from '../article.model';
 
 @Component({
-    template: `
-    <div class="container">
-  <div *ngIf="article?.title" class="well hoverwell thumbnail">
-      <h1>{{ article?.title }}</h1>
-        <img *ngIf="article?.urlToImage" [src]="article?.urlToImage">
-                
-        <div class="info" *ngIf="article?.publishedAt || article?.author">{{ article?.publishedAt  | date  }} by {{ article?.author }}</div>
-        <br>
-        <p class="article-content" *ngIf="article?.description">{{ article?.description }} <span><a [href]="article.url" target="_blank">Read more</a></span></p>
-    </div>
-</div>
-    `,
+    templateUrl: '/app/news/news-details/the-next-web-details.component.html',
     styles: [
         `
         .article-content {
