@@ -1,6 +1,9 @@
+<h1>Angular-News-Feed-app</h1>
+News feed application written on Angular 4.
+
 Create application to display news based on existing public API
 
-Api endpoint <a href="https://newsapi.org">https://newsapi.org/</a>
+API endpoint <a href="https://newsapi.org">https://newsapi.org/</a>
 
 Application should consist of the following pages
 
@@ -24,5 +27,4 @@ Application should consist of the following pages
 
 Here you can find source .ts files which have been used to create and deploy a <a target="_blank" href="https://inlighter.github.io/Portfolio/Demo/">Demo</a>
 
-
-
+News-details cards have been duplicated bacause of requirements (place for future optimization).
