@@ -184,6 +184,7 @@ header::before {
 section h3.section-subheading {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic
+  background-color: lightsteelblue;
 }
 
 section {
@@ -514,3 +515,4 @@ img::selection {
 img::-moz-selection {
   background: 0 0
 }
+
