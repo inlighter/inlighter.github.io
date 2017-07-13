@@ -516,3 +516,11 @@ img::-moz-selection {
   background: 0 0
 }
 
+.portfolio-caption a {
+  color: salmon;
+}
+
+.portfolio-caption a:hover {
+  color: black;
+}
+
